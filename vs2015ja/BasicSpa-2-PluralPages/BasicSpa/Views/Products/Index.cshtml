@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/knockout-3.4.0.js"></script>
+<script src="~/Scripts/app.product.js"></script>
+<script src="~/Scripts/app.products.js"></script>
+<h2>Products</h2>
+<div class="row">
+    <div class="col-md-6">
+        <table id="products">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    @*<th>Description</th>*@
+                    <th>Publisher</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tfoot></tfoot>
+            <tbody data-bind='foreach: lines'>
+                <tr data-bind='click: Clicked'>
+                    <td class='nowrap' data-bind='text:Title'></td>
+                    @*<td data-bind='text:Description'></td>*@
+                    <td class='nowrap' data-bind='text:Publisher'></td>
+                    <td class='nowrap' data-bind='text:Price'></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <div id="productItem">
+            <p>Title : <span data-bind='text:Title' /></p>
+            <p>Description : <span data-bind='text:Description' /></p>
+            <p>Publisher : <span data-bind='text:Publisher' /></p>
+            <p>Price : <span data-bind='text:Price' /></p>
+            <p>
+                <a target="_blank" data-bind='attr: {href:DownloadUrl}, visible:DownloadUrl' \">Download</a>
+                <a target="_blank" data-bind='attr: {href:ProductUrl}, visible:ProductUrl' \">Open Site</a>
+                <a target="_blank" data-bind='attr: {href:PublisherUrl}, visible:PublisherUrl' \">Publisher</a>
+            </p>
+        </div>
+    </div>
+</div>

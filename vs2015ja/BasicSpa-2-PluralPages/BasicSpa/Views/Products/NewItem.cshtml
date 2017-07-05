@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "NewItem";
+}
+<script src="~/Scripts/app.product.js"></script>
+<script src="~/Scripts/app.newItem.js"></script>
+<script src="~/Scripts/knockout-3.4.0.js"></script>
+<h2>NewItem</h2>
+
+<div class="row">
+    <div class="col-md-10">
+        <div id="newItem">
+            <input type='hidden' data-bind='value:Id' />
+            <p>Title : <input type='text' data-bind='value:Title' /></p>
+            <p>ProductUrl : <input type='text' data-bind='value:ProductUrl' /></p>
+            <p>DownloadUrl : <input type='text' data-bind='value:DownloadUrl' /></p>
+            <p>Description : <input type='text' data-bind='value:Description' /></p>
+            <p>Publisher : <input type='text' data-bind='value:Publisher' /></p>
+            <p>PublisherUrl : <input type='text' data-bind='value:PublisherUrl' /></p>
+            <p>Price : <input type='text' data-bind='value:Price' /></p>
+            <p><input class='saveButton' type='button' value='Save' /></p>
+        </div>
+        <div id="saveItemMessage">
+            <div data-bind="visible:savedTitle"><span data-bind="text:savedTitle"></span>を保存しました。</div>
+        </div>
+    </div>
+
+</div>

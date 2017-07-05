@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>HOME</h1>
+    <p class="lead">これは ASP.NET SPA の実装方法を理解するためのサンプルです。このサンプルは複数のページで構成されています。ナビゲーションをクリックすると別の Controller の画面に遷移します。</p>
+    <p>@Html.ActionLink("Start »", "Index", "Products", null, new { @class = "btn btn-primary btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Products</h2>
+        <p>アイテムを一覧・詳細表示する画面のサンプルです。</p>
+        <p>@Html.ActionLink("Open »", "Index", "Products",null, new {@class="btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>New Item</h2>
+        <p>新しいアイテムを登録する画面のサンプルです。</p>
+        <p>@Html.ActionLink("Open »", "NewItem", "Products", null, new { @class = "btn btn-default" })</p>
+    </div>
+    <div class="col-md-4">
+        <h2>About</h2>
+        <p>アプリとAPIのバージョンを表示します。</p>
+        <p>@Html.ActionLink("Open »", "About", "Home", null, new { @class = "btn btn-default" })</p>
+    </div>
+</div>

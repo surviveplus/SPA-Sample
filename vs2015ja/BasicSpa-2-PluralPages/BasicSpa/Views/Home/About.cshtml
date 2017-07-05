@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+<script src="~/Scripts/knockout-3.4.0.js"></script>
+<script src="~/Scripts/app.about.js"></script>
+<h2>About</h2>
+
+<div class="row">
+    <div class="col-md-10">
+        <div id="about">
+            <div>Title :  <span data-bind="text:Title"></span></div>
+            <div>Version :  <span data-bind="text:Version"></span></div>
+        </div>
+    </div>
+</div>
